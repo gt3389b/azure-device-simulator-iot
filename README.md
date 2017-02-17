@@ -27,13 +27,16 @@ The application uses [Node.js](http://nodejs.org/) and [npm](https://www.npmjs.c
 ## Helpful utilities
 Requires:  iothub-explorer and jq
 
-1. List all devices:
+List all devices:
+
     `iothub-explorer list`
 
-2. Query information about each device in the deviceIds.json file:
+Query information about each device in the deviceIds.json file:
+
     `cat deviceIds.json | jq -r .[] | xargs -L 1 iothub-explorer info`
 
-3. Delete information about each device in the deviceIds.json file:
+Delete information about each device in the deviceIds.json file:
+
     `cat deviceIds.json | jq -r .[] | xargs -L 1 iothub-explorer delete`
 
 ## Next features / help wanted
