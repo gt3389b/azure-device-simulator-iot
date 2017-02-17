@@ -20,6 +20,7 @@ require('dotenv').load();
 
 var Device = require('./device');
 
+// Load the list of devices
 var deviceIds = jsonfile.readFileSync("./deviceIds.json");
 
 var step;
@@ -29,20 +30,20 @@ for (step = 0; step < process.env.num_devices; step++) {
       var device1 = new Device(process.env.iot_hub_connection_string, deviceIds[step]);
    } else {
       console.log('Starting new device');
+      // We are out of deviceIds in our configuration, so have the class create one for us
       var device1 = new Device(process.env.iot_hub_connection_string, null);
    }
 
    if (deviceIds.indexOf(device1.getInfo()) < 0) {
-      console.log('adding device: '+ deviceIds[step]);
+      console.log('adding device to deviceIds.json: '+ deviceIds[step]);
       deviceIds.push(device1.getInfo());
    }
 }
 
-console.log(deviceIds);
+// We are done processing our devices, so save the list 
 jsonfile.writeFile("./deviceIds.json", deviceIds, function(err) {
    if(err) {
       return console.log(err);
    }
-
-   console.log("The file was saved!");
+   console.log("The deviceIds.json file was saved!");
 }); 
