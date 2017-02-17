@@ -29,7 +29,7 @@ Requires:  iothub-explorer and jq
 
 List all devices:
 
-   iothub-explorer list
+   `iothub-explorer list`
 
 Query information about each device in the deviceIds.json file:
 
