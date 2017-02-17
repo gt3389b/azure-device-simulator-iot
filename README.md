@@ -29,15 +29,15 @@ Requires:  iothub-explorer and jq
 
 List all devices:
 
-    `iothub-explorer list`
+   iothub-explorer list
 
 Query information about each device in the deviceIds.json file:
 
-    `cat deviceIds.json | jq -r .[] | xargs -L 1 iothub-explorer info`
+   cat deviceIds.json | jq -r .[] | xargs -L 1 iothub-explorer info
 
 Delete information about each device in the deviceIds.json file:
 
-    `cat deviceIds.json | jq -r .[] | xargs -L 1 iothub-explorer delete`
+   cat deviceIds.json | jq -r .[] | xargs -L 1 iothub-explorer delete
 
 ## Next features / help wanted
 
