@@ -3,7 +3,7 @@
 In order to use this simulator, you must have created a Microsoft Azure IotHub.  This can be done either via the portal.azure.com or through an ARM file.  For this project,
 I created a resource group with a single iothub.
 
-The program creates a devices.json file which will include the deviceIds of the devices it creates.  You can prepoluate this if desired.  If the num_devices is greater than the number of deviceIds in the list, then the program will create them.  Created devices will be named 'SimulatedDevice-<UUID4>' where UUID4 is a generated UUID.
+The program creates a deviceIds.json file which will include the deviceIds of the devices it creates.  You can prepoluate this if desired.  If the num_devices is greater than the number of deviceIds in the list, then the program will create them.  Created devices will be named 'SimulatedDevice-<UUID4>' where UUID4 is a generated UUID.
 
 
 ## Configuring the simulator

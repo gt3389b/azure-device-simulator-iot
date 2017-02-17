@@ -20,7 +20,7 @@ require('dotenv').load();
 
 var Device = require('./device');
 
-var deviceIds = jsonfile.readFileSync("./devices.json");
+var deviceIds = jsonfile.readFileSync("./deviceIds.json");
 
 var step;
 for (step = 0; step < process.env.num_devices; step++) {
@@ -39,7 +39,7 @@ for (step = 0; step < process.env.num_devices; step++) {
 }
 
 console.log(deviceIds);
-jsonfile.writeFile("./devices.json", deviceIds, function(err) {
+jsonfile.writeFile("./deviceIds.json", deviceIds, function(err) {
    if(err) {
       return console.log(err);
    }
