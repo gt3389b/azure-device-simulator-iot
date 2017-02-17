@@ -41,7 +41,7 @@ for (step = 0; step < process.env.num_devices; step++) {
 }
 
 // We are done processing our devices, so save the list 
-jsonfile.writeFile("./deviceIds.json", deviceIds, function(err) {
+jsonfile.writeFile("./deviceIds.json", deviceIds, {spaces: 2}, function(err) {
    if(err) {
       return console.log(err);
    }
