@@ -1,0 +1,31 @@
+{
+  "name": "azure-device-simulator-iot",
+  "version": "0.0.1",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "description": "Very useful for debugging and demoing Internet of Things (IoT) solutions built on Azure IoTHub",
+  "license": "Apache License, Version 2.0",
+  "dependencies": {
+    "azure-iot-device": "^1.1.6",
+    "azure-iot-device-mqtt": "^1.1.6",
+    "azure-iothub": "^1.1.6",
+    "cfenv": "^1.0.0",
+    "dotenv": "^2.0.0",
+    "express": "^4.13.3",
+    "jsonfile": "^2.4.0",
+    "uuid": "^3.0.1"
+  },
+  "keywords": [
+    "node",
+    "iot",
+    "mqtt"
+  ],
+  "author": [
+    {
+      "name": "Russell Leake",
+      "email": "gt3389b@gmail.com"
+    }
+  ]
+}
