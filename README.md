@@ -24,6 +24,18 @@ The application uses [Node.js](http://nodejs.org/) and [npm](https://www.npmjs.c
 4. Start the application:  
     `npm start`
 
+## Helpful utilities
+Requires:  iothub-explorer and jq
+
+List all devices:
+   `iothub-explorer list`
+
+Query information about each device in the deviceIds.json file:
+   `cat deviceIds.json | jq -r .[] | xargs -L 1 iothub-explorer info`
+
+Delete information about each device in the deviceIds.json file:
+   `cat deviceIds.json | jq -r .[] | xargs -L 1 iothub-explorer delete`
+
 ## Next features / help wanted
 
 ## License
